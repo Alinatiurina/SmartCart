@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 740px;
+}
+.title {
+  color: #323f47;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.14px;
+  text-align: start;
+  margin-left: 10px;
+}
+.sortContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.box {
+}
+.sortBtnContainer {
+  display: flex;
+}
+.sortBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.addBtn {
+  border-radius: 30px;
+  background: #d9d9d9;
+  height: 45px;
+  display: flex;
+  justify-self:center;
+  gap: 10px;
+}
+.addIcon{
+ background-color: #f0eb6a;
+ width: 25px;
+height: 25px;
+border-radius: 100%;
+}
+.text {
+  text-align: start;
+}
+.boxBtn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.addBtnButton {
+  border-radius: 30px;
+  background: #f0eb6a;
+  width: 145px;
+  height: 64px;
+  padding: 14px 28px;
+}
+.clearBtn {
+  border-radius: 30px;
+  border: 1px solid #323f47;
+  width: 151px;
+  padding: 14px 28px;
+  color: #323f47;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px; /* 138.462% */
+  letter-spacing: -0.13px;
+}

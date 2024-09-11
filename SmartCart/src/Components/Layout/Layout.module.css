@@ -1,0 +1,18 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 343px;
+  height: 770px;
+  border-radius: 30px;
+  background: #f0eff4;
+  padding: 18px;
+}
+.logo{
+  color: #323F47;
+text-align: start;
+font-size: 18px;
+font-weight: 700;
+line-height: 20px; /* 111.111% */
+letter-spacing: -0.18px;
+text-transform: uppercase;
+}
