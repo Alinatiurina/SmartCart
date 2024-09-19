@@ -16,7 +16,7 @@ export default function ShoppingItem({ refreshGoods, setGoods }) {
       const data = await fetchGoods();
       setLocalGoods(data.map(good => ({
         ...good,
-        checked: JSON.parse(localStorage.getItem(good.id)) || false // Відновлення стану чекбоксу
+        checked: JSON.parse(localStorage.getItem(good.id)) || false
       })));
       setGoods(data);
     } catch (error) {
@@ -35,7 +35,7 @@ export default function ShoppingItem({ refreshGoods, setGoods }) {
       await deleteGood(goodId);
       setLocalGoods((prevGoods) => prevGoods.filter((good) => good.id !== goodId));
       setGoods((prevGoods) => prevGoods.filter((good) => good.id !== goodId));
-      localStorage.removeItem(goodId); // Видалення з localStorage
+      localStorage.removeItem(goodId); 
     } catch (error) {
       console.error("Error deleting good:", error);
     }
@@ -45,7 +45,7 @@ export default function ShoppingItem({ refreshGoods, setGoods }) {
     setLocalGoods((prevGoods) =>
       prevGoods.map((good) => {
         const isChecked = good.id === id ? !good.checked : good.checked;
-        localStorage.setItem(good.id, isChecked); // Збереження стану чекбоксу в localStorage
+        localStorage.setItem(good.id, isChecked);
         return { ...good, checked: isChecked };
       })
     );
@@ -62,7 +62,7 @@ export default function ShoppingItem({ refreshGoods, setGoods }) {
             type="checkbox"
             checked={good.checked || false}
             onChange={() => handleCheckboxChange(good.id)}
-            id={`checkbox-${good.id}`} // Унікальний id для чекбоксу
+            id={`checkbox-${good.id}`} 
           />
           <label className={css.label} htmlFor={`checkbox-${good.id}`}>
             {good.title}

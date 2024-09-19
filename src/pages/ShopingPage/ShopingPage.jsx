@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import ShoppingItem from "../../Components/ShoppingItem/ShoppingItem";
 import css from "./ShopingPage.module.css";
-import { CiCirclePlus } from "react-icons/ci";
+// import { CiCirclePlus } from "npm i react-icons/ci";
 import { addGood, clearAllGoods } from "../../redux/goodsOps";
 import Modal from "../../Components/Modal/addModal";
 import ShoppingList from "../../Components/ShoppingList/ShoppingList";
@@ -26,8 +25,8 @@ export default function ShopingPage() {
   const handleAddGood = async (formData) => {
     try {
       await addGood(formData);
-      setRefreshGoods((prev) => !prev); // Оновлюємо список
-      handleModalClose(); // Закриваємо модальне вікно після додавання
+      setRefreshGoods((prev) => !prev);
+      handleModalClose(); 
     } catch (error) {
       console.error("Error adding good:", error);
     }
@@ -36,18 +35,18 @@ export default function ShopingPage() {
   const handleClearList = async () => {
     try {
       await clearAllGoods(goods);
-      setRefreshGoods((prev) => !prev); // Оновлюємо список після очищення
+      setRefreshGoods((prev) => !prev);
     } catch (error) {
       console.error("Error clearing list:", error);
     }
   };
 
-  // Обчислення загальної вартості, загальної кількості та залишку
+
   useEffect(() => {
     const total = goods.reduce((sum, item) => sum + parseFloat(item.cost), 0);
     const quantity = goods.reduce((sum, item) => sum + parseInt(item.quantity), 0);
-    const remaining = goods.filter(item => !item.checked).length; // Товари без відміченого чекбоксу
-    const checked = goods.filter(item => item.checked).length; // Відмічені товари
+    const remaining = goods.filter(item => !item.checked).length; 
+    const checked = goods.filter(item => item.checked).length; 
 
     setTotalCost(total);
     setTotalQuantity(quantity);
@@ -64,7 +63,7 @@ export default function ShopingPage() {
               <p className={css.title}>Мій список</p>
             </div>
             <button className={css.addBtn} onClick={handleModalOpen}>
-              <CiCirclePlus className={css.addIcon} />
+              {/* <CiCirclePlus className={css.addIcon} /> */}
               Додати
             </button>
           </div>
@@ -74,7 +73,7 @@ export default function ShopingPage() {
         <div>
           <p className={css.text}>Загальна вартість: {totalCost.toFixed(2)} грн</p>
           <p className={css.text}>Загальна кількість: {totalQuantity} шт</p>
-          <p className={css.text}>Залишилось купити: {remainingQuantity} шт</p>
+          {/* <p className={css.text}>Залишилось купити: {remainingQuantity} шт</p> */}
           <div className={css.boxBtn}>
             <button className={css.clearBtn} onClick={handleClearList}>
               Очистити список
