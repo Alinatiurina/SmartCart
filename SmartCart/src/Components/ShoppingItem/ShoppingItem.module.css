@@ -12,9 +12,13 @@ gap: 10px;
 }
 .input {
 }
-.label {
-}
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 595px;
 
+}
 .textContainer{
     display: flex;
     flex-direction: column;
@@ -75,7 +79,7 @@ gap: 10px;
   
   .label {
     cursor: pointer;
-    width: 185px;
+    width: 180px;
     text-align: start;
   font-size: 32px;
   font-weight: 700;
