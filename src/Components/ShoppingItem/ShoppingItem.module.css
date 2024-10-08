@@ -79,11 +79,13 @@
 
 .label {
   cursor: pointer;
+  color: #000;
   width: 180px;
   text-align: start;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 32px; /* 100% */
+  overflow: hidden;
 }
 
 .input:checked + .label {

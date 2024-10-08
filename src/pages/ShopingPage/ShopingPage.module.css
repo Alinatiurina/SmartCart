@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 .box {
 }
@@ -39,17 +40,18 @@
   background: #d9d9d9;
   height: 45px;
   display: flex;
-  justify-self:center;
+  justify-self: center;
   gap: 10px;
 }
-.addIcon{
- background-color: #f0eb6a;
- width: 25px;
-height: 25px;
-border-radius: 100%;
+.addIcon {
+  background-color: #f0eb6a;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
 }
 .text {
   text-align: start;
+  color: black;
 }
 .boxBtn {
   display: flex;
@@ -74,4 +76,5 @@ border-radius: 100%;
   font-weight: 700;
   line-height: 18px; /* 138.462% */
   letter-spacing: -0.13px;
+  background-color: #f9f9f9;
 }
